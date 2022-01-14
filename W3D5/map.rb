@@ -26,6 +26,9 @@ class Map
   end
 
   def delete(key)
+    @map.each_with_index do |pair,idx|
+      @map = @map[0...idx].concat(@map[idx+1..-1]) if pair[0] == key 
+    end
   end
 
   def show
