@@ -10,7 +10,9 @@ class Map
     # Shovel that into the map 
 
     if @map.any?{|pair| pair[0] == key}
-      pair[1] = value if 
+      @map.each do |pair|
+        pair[1] = value if pair[0] == key
+      end
     else
       @map << [key, value] 
     end
@@ -36,4 +38,5 @@ class Map
 
     p @map
   end
+
 end
