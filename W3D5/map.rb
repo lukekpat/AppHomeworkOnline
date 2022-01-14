@@ -32,7 +32,8 @@ class Map
   end
 
   def show
+    # No idea what this is supposed to be, so just printing the map.  
+
+    p @map
   end
-
-
 end
